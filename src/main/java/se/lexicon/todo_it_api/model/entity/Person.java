@@ -32,20 +32,11 @@ public class Person {
     )
     private List<TodoItem> todoItems;
 
-    public void setTodoItems(List<TodoItem> todoItems){
-        if(todoItems == null) todoItems = new ArrayList<>();
-        if(todoItems.isEmpty()){
-            if(this.todoItems != null){
-                for(TodoItem todoItem : this.todoItems){
-                    todoItem.setAssignee(null);
-                }
-            }
-        }else {
-            for(TodoItem todoItem : todoItems){
-                todoItem.setAssignee(this);
-            }
-        }
-        this.todoItems = todoItems;
+    public Person(String firstName, String lastName, LocalDate birthDate) {
+    }
+
+    public void setTodoItems(List<TodoItem> todoItems) {
+
     }
 
     public List<TodoItem> getTodoItems(){
